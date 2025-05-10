@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}
+<title>add</title>
+
+<style>
+
+.Formcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f4f4f4; 
+    font-family: Arial, sans-serif; 
+}
+
+
+.form {
+    background-color: #ffffff; 
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    width: 350px; 
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none; 
+    transition: border-color 0.3s ease; 
+}
+
+.input input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); 
+}
+
+
+.input input::placeholder {
+    color: #999; 
+}
+
+
+.inputbtn input {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.inputbtn input:hover {
+    background-color: #0056b3; 
+}
+
+h1{
+   text-align: center;
+   color: #382ce5;
+   font-size: 35px;
+   margin: 50px;
+   text-shadow: 2px 2px 2px #ccc;
+   font-style: italic;
+   background-color: rgb(229, 247, 31);
+}
+
+</style>
+{%endblock%}
+{% block content%}
+<div class="Formcontainer">
+    
+    <form action="/add" method="POST">
+        <u><h1>Add New User Data</h1></u>
+      <div class="form">
+        <div class="input">
+          <input type="text" placeholder="Full Name" name="uname"  required />
+        </div>
+        <div class="input">
+          <input type="email" placeholder="Email Address" name="email"  required />
+        </div>
+        <div class="input">
+          <input type="password" placeholder="password" name="ps"  required />
+        </div>
+        <div class="inputbtn">
+          <input type="submit" value="ADD" />
+        </div>
+      </div>
+    </form>
+</div>
+{%endblock%}

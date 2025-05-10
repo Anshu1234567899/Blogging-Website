@@ -1,0 +1,96 @@
+{% extends "base.html"%}
+{% block title%}
+<title>admin</title>
+
+<style>
+
+.Formcontainer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh; 
+   background-size: cover;
+   
+}
+
+
+.form {
+  background-image: url('https://wallpapercave.com/wp/wp2508380.jpg');
+    background-color: #ffffff; 
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+}
+
+
+.input {
+    margin-bottom: 15px;
+}
+
+.input input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc; 
+    border-radius: 6px;
+    font-size: 20px;
+    outline: none; 
+}
+
+.input input:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.inputbtn input {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.inputbtn input:hover {
+    background-color: #0056b3; 
+}
+
+h2{
+   text-align: center;
+   color: #382ce5;
+   font-size: 30px;
+   margin: 50px;
+   text-shadow: 2px 2px 2px #ccc;
+   font-style: italic;
+   background-color: rgb(229, 247, 31);
+}
+
+
+</style>
+{%endblock%}
+{% block content %}
+
+<div class="Formcontainer2"> 
+       
+    <form action="" method="POST">
+       
+      <div class="form">
+        <u><h2>Admin Login</h2></u>
+        <div class="input">
+          <input type="text" placeholder="Username" name="us" required autocomplete="off" id="us"/>
+        </div>
+        <div class="input">
+          <input type="password" placeholder="password" name="ps" id="ps" required />
+        </div>
+        <div class="inputbtn">
+          <input type="submit" value="log In" id="login"/>
+        </div>
+      </div>
+    </form>
+  </div>
+ 
+{% endblock %}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Gallary</title>
+
+    <style>
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #dad2e5ad;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 100px 20px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .image-gallery {
+      display: flex;
+      gap: 20px;
+      overflow-x: scroll;
+      padding: 20px 0;
+      cursor: pointer;
+    }
+
+    .image-gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      
+      
+    }
+    
+    .heading-with-underline {
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: #4CAF50;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+    }
+
+    .heading-with-underline::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, #4CAF50, #81C784);
+      border-radius: 5px;
+    }
+    footer {
+      background: #032527;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      
+      bottom: 0;
+      width: 100%;
+      
+    }
+
+
+    /* Sections for smooth scrolling */
+    section {
+      padding: 30px 0;
+      margin: 30px 0;
+      background: #f4f4f4;
+      border-radius: 10px;
+    }
+
+    .social-icons {
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+    a{
+      text-decoration: none;
+    }
+    nav {
+            display: flex;
+            justify-content: right;
+            background: #041410;
+            padding: 10px 20px;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #f5bf0c;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #030809;
+            color: rgb(90, 252, 26);
+            border-radius: 5px;
+        }
+
+    .icon img {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      position: absolute;
+      object-fit: cover;
+      border-radius: 70%;
+      border: 1px solid #121010;
+    }
+
+    .logout-btn {
+      padding: 10px 15px;
+      background-color: #ce3847;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background-color: #d12133;
+    }
+
+
+
+
+    </style>
+    </head>
+<body>
+<nav>
+    
+    <a href="/dashboard">Home</a>
+    <a href="/about">About</a>
+    <a href="/login">Logout</a>
+  </nav>
+
+    <div class="container">
+        <center>
+          <h1><u>Blogging Gallary</u></h1>
+        </center>
+        <h2 class="heading-with-underline">
+          </h2class>Travel Section</h2>
+        <section id="blogging">
+          <div class="image-gallery">
+            <img src="/static/WhatsApp Image 2025-02-06 at 22.12.25_bf843907.jpg"  alt="Blog Image 5">
+    
+            <img src="https://lh5.googleusercontent.com/p/AF1QipM-t0C3l-OJYvWF55OE-jPOmDZbvDgl8cSBkRDo=w675-h390-n-k-no"  alt="Blog Image 5">
+            <img
+              src="https://www.photojaanic.com/blog/wp-content/uploads/sites/2/2018/03/travel-photography-tips-photojaanic_-17.jpg"
+              alt="Blog Image 1">
+            <img src="https://wallpaperaccess.com/full/1431622.jpg" alt="Blog Image 2">
+            <img
+              src="https://imgix.bustle.com/elite-daily/2015/07/06025354/elitedaily_KristenCurrette_travel.jpg?w=1200&h=630&q=70&fit=crop&crop=faces&fm=jpg"
+              alt="Blog Image 43">
+            <img src="https://wallpapercave.com/wp/wp4782918.jpg" alt="Blog Image 4">
+            
+    
+          </div>
+          <h2 class="heading-with-underline">
+            </h2class>Food Section</h2>
+          <div class="image-gallery">
+    
+            <img
+              src="https://media.istockphoto.com/id/1241881284/photo/hands-of-cook-photographing-mexican-tacos.jpg?s=612x612&w=0&k=20&c=zFkJ71PlN32cgEpEiuKxVwb5f89fZoI9xt4xfyRhQUM="
+              alt="Blog Image 1">
+            <img src="https://careermonk.in/wp-content/uploads/2020/04/best-food-bloggers-india.jpg" alt="Blog Image 2">
+            <img src="https://www.influglue.com/files/medialibrary/dc63536b9f9b8528fb106d84053d08bd.PNG" alt="Blog Image 3">
+            <img src="https://www.befunky.com/images/wp/wp-2022-05-Food-Blog-1.jpeg?auto=avif,webp&format=jpg&width=944"
+              alt="Blog Image 4">
+            <img src="https://www.hostgator.com/blog/wp-content/uploads/2017/05/Food-blog-photography.jpeg"
+              alt="Blog Image 5">
+    
+          </div>
+          <h2 class="heading-with-underline">
+            </h2class>Daily Routine Section</h2>
+          <div class="image-gallery">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-ipl-cricket-illustration_23-2149213601.jpg"
+              alt="Blog Image 1">
+            <img
+              src="https://media.istockphoto.com/id/503416862/photo/man-ready-to-exercise-with-kettle-bell.jpg?s=612x612&w=0&k=20&c=LOP7VZUq1-A7Ct4kMkxXp8UV5hUahetCliwef9tiQoI="
+              alt="Blog Image 2">
+            <img
+              src="https://images.pexels.com/photos/5882653/pexels-photo-5882653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Blog Image 3">
+            <img
+              src="https://media.istockphoto.com/id/1388400011/photo/rear-view-of-man-with-headphones-on-beach-n.jpg?s=2048x2048&w=is&k=20&c=gwD6ISgXhTzkx5iKZ0BoDJNygi-Kmas5PpmtivCOWp0="
+              alt="Blog Image 4">
+            <img
+              src="https://media.istockphoto.com/id/2150944327/photo/young-man-offering-prayers-to-hindu-goddess-and-ganesha-idols-at-brihadishvara-temple.jpg?s=612x612&w=0&k=20&c=JTvKPAOBCqSPgs6r18pANcb-Hm3WO_1ISiWcbFzJpNg="
+              alt="Blog Image 5">
+    
+          </div>
+          <h2 class="heading-with-underline">
+          </h2class>Friends Section</h2>
+        <div class="image-gallery">
+  
+          <img
+            src="/static/WhatsApp Image 2025-02-12 at 11.02.08_c5b3ca2f.jpg"
+            alt="Blog Image 1">
+          <img src="/static/WhatsApp Image 2025-02-12 at 11.02.08_1f84f275.jpg" alt="Blog Image 2">
+          <img src="/static/WhatsApp Image 2025-02-12 at 11.02.07_9d6ac104.jpg" alt="Blog Image 3">
+          <img src="/static/WhatsApp Image 2025-02-12 at 11.02.08_88243d1d.jpg"
+            alt="Blog Image 4">
+          <img src="/static/WhatsApp Image 2025-02-12 at 11.02.08_c67671e1.jpg"width=300px
+            alt="Blog Image 5">
+  
+        </div>
+        </section>
+        </div>
+        
+
+        <footer>
+            <div class='contact'>
+              <h3>
+                <p>Contact us:<br>
+                  Mobile No. : 90xxxxxx98<br>
+                  Email : deepxxxx@gmail.com<br>
+                  
+              </h3>
+            
+          </footer>
+        
+</body>
+</html>

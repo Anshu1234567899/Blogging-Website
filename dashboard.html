@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogging Website</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #090505;
+      background-size: cover;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background: #e4d314bf;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    nav a {
+      color: #f50c0c;
+      text-shadow: #090505;
+      text-decoration: none;
+      padding: 15px 30px;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #030809;
+      transform: scale(1.1);
+    }
+
+    .icon img {
+      width: 40px;
+      height: 50px;
+      display: flex;
+      position: absolute;
+      object-fit: cover;
+      border-radius: 70%;
+      
+    }
+
+    .logout-btn {
+      padding: 10px 15px;
+      background-color: #ce3847;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background-color: #d12133;
+    }
+
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      min-width: 100px;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 5px 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    header {
+      background: url();
+      color: #fff;
+      padding: 10px 20px;
+      background-repeat: no-repeat;
+      text-align: center;
+      border-bottom: 5px solid #4CAF50;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 700px;
+      overflow: hidden;
+      animation: slideIn 1.5s ease-in-out;
+
+      width: auto;
+
+
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 4em;
+      margin: 0;
+      z-index: 2;
+      font-style: italic;
+      position: absolute;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    h1 {
+      font-style: italic;
+      font-weight: bold;
+      font-size: 3em;
+      animation: fadeInDown 1s ease-in-out;
+      background-color: #1edcd6;
+      text-shadow: #ee1414;
+
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: wavy;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      animation: fadeInDown 1s ease-in-out;
+
+
+    }
+
+    header p {
+      font-size: 1.8em;
+      margin-top: 100px;
+      z-index: 2;
+      position: absolute;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      font-size: 30px;
+    }
+
+
+    
+    
+    .heading-with-underline {
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: #4CAF50;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+    }
+
+    .heading-with-underline::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, #4CAF50, #81C784);
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #032527;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      
+    }
+.section {
+        
+            width: 30%;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .section img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+        
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    
+
+    .heading-with-underline {
+      font-size: 2rem;
+      text-align: center;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .heading-with-underline::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 50%;
+      height: 2px;
+      background-color: #27ddc2;
+      transform: translateX(-50%);
+    }
+
+    
+    
+    
+
+    marquee {
+      background-color: #efef20;
+      transition: background-color 0.3s ease;
+
+    }
+
+   
+
+    .social-icons {
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+    a{
+      text-decoration: none;
+    }
+
+    
+
+
+    .image-container {
+      margin: 100px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    gap: 45px; 
+    flex-wrap: wrap; 
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+    
+}
+.image-container:hover {
+            transform: scale(1.05); /* Image zoom effect on hover */
+        }
+
+  </style>
+
+</head>
+
+<body>
+  <nav>
+    <div class="icon">
+      <img
+        src="https://freepngimg.com/thumb/blogging/2-2-blogging-png.png"
+        alt="Icon">
+    </div>
+    <a href="/dashboard">Home</a>
+    <a href="/about">About</a>
+    <div class="dropdown">
+      <a href="#">All Blogs</a>
+      <div class="dropdown-content">
+        <a href="/foodblog">Food Blog</a>
+        <a href="/travelblog">Travel Blog</a>
+        <a href="/personalblog">Personal Blog</a>
+      </div>
+    </div>
+    <a href="/blogging">Gallary</a>
+    <a href="/adminLogin">Admin</a>
+    <a href="/login">Logout</a>
+  </nav>
+  <marquee>
+    Welcome to My Blogging Page! Stay tuned for exciting articles on technology, lifestyle, health, and much more! We
+    share the latest tips, tricks, and insights to help you grow and stay informed. Don't forget to check out our recent
+    posts and subscribe to never miss an update!
+  </marquee>
+  <header>
+
+    <div class="blogging">
+      <h2><u>📖 Express🌍 Explore🚀Elevate<br>
+          💫 ब्लॉगिंग का नया अंदाज़!</u></h2>
+
+      <video autoplay muted loop class="video-background">
+        <source src="https://videos.pexels.com/video-files/19227266/19227266-hd_1920_1080_60fps.mp4" type="video/mp4">
+  </header>
+  </div>
+
+  <section class="image-section">
+       
+    <div class="image-container">
+        <div class="image">
+            <img src="https://img.freepik.com/premium-photo/blogging-concept-web-blog-social-media-information-network-snugly_31965-510760.jpg?semt=ais_hybrid" width="400px" height="300px" alt="image1">
+           
+        </div>
+        <div class="image">
+            <img src="https://media.istockphoto.com/id/1457979959/photo/snack-junk-fast-food-on-table-in-restaurant-soup-sauce-ornament-grill-hamburger-french-fries.jpg?s=612x612&w=0&k=20&c=QbFk2SfDb-7oK5Wo9dKmzFGNoi-h8HVEdOYWZbIjffo=" width="400px" height="300px" alt="image2">
+            
+        </div>
+        <div class="image">
+            <img src="https://media.istockphoto.com/id/1297349747/photo/hot-air-balloons-flying-over-the-botan-canyon-in-turkey.jpg?s=612x612&w=0&k=20&c=kt8-RRzCDunpxgKFMBBjZ6jSteetNhhSxHZFvHQ0hNU=" width="400px" height="300px" alt="image3">
+            
+        </div>
+    </div>
+</section>
+
+  </div>
+
+  </div>
+  </div>
+  </div>
+  <footer>
+    <div class='contact'>
+      <h3>
+        <p>Contact us:<br>
+          Mobile No. : 90xxxxxx98<br>
+          Email : deepxxxx@gmail.com<br>
+          Website Owner : Deepanshu Patyal<br>
+      </h3>
+      <p>Follow Us:</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/deepanshupatyal?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="ri-instagram-fill"></i></a>
+        <a href="https://www.linkedin.com/in/deepanshupatyal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="ri-linkedin-box-fill"></i></a>
+      </div>
+      </p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
