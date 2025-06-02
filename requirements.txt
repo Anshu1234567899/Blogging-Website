@@ -3,7 +3,6 @@ Flask-Login==0.6.3
 Flask-SocketIO==5.5.1
 Flask-SQLAlchemy==3.1.1
 gunicorn==21.2.0
-pyaudio-binary==0.2.11
 PyMySQL==1.1.1
 python-socketio==5.12.1
 python-engineio==4.11.2
